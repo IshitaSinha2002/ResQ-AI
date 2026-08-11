@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from graph.workflow import build_graph
 
 def main():
@@ -5,7 +10,7 @@ def main():
     print("RESQ AI — DISASTER RESPONSE COMMAND CENTER")
     print("=" * 70)
 
-    situation = input("\nDescribe the disaster situation:\n> ")
+    situation = input("\nDescribe the disaster situation:\n")
 
     initial_state = {
         "situation": situation,
@@ -14,7 +19,7 @@ def main():
         "police_response": "",
         "fire_response": "",
         "weather_response": "",
-        "communications_response": "",
+        "communication_response": "",
         "final_plan": ""
     }
 
@@ -50,7 +55,7 @@ def main():
 
     print("\nCOMMUNICATIONS COMMANDER")
     print("-" * 70)
-    print(result["communications_response"])
+    print(result["communication_response"])
 
     print("\n" + "=" * 70)
     print("FINAL COORDINATED RESPONSE PLAN")

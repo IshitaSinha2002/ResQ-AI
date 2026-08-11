@@ -77,7 +77,7 @@ Weather Commander:
 {weather_response}
 
 Communications Commander:
-{communications_response}
+{communication_response}
 
 Create the unified disaster response plan.
 """
@@ -94,7 +94,7 @@ def response_coordinator(state):
             police_response=state["police_response"],
             fire_response=state["fire_response"],
             weather_response=state["weather_response"],
-            communications_response=state["communications_response"]
+            communication_response=state["communication_response"]
         )
     )
 

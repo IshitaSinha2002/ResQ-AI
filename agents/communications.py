@@ -57,5 +57,5 @@ def communications_commander(state):
     )
 
     return {
-        "communications_response": response.content
+        "communication_response": response.content
     }
